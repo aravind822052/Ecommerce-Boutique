@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Order</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Boutique Store</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="products.html">Shop</a>
+                <a class="nav-link" href="cart.html">Cart</a>
+                <a class="nav-link" href="track_order.html">Track Order</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h2>Place a Custom Order</h2>
+        <form>
+            <label>Choose Fabric:</label>
+            <select class="form-select">
+                <option>Cotton Fabric</option>
+                <option>Silk Fabric</option>
+            </select>
+
+            <label>Length (meters):</label>
+            <input type="number" class="form-control" min="1" required>
+
+            <label>Custom Design Details:</label>
+            <textarea class="form-control" rows="4" required></textarea>
+
+            <button class="btn btn-primary mt-3">Submit Order</button>
+        </form>
+    </div>
+</body>
+</html>

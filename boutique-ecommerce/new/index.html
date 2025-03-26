@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique E-Commerce</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #ff7eb3, #ff758c);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        /* Product Cards */
+        .card {
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Category Section */
+        .category img {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .category img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Testimonial Carousel */
+        .carousel-item {
+            padding: 30px;
+            text-align: center;
+        }
+        .carousel-item p {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        .carousel-item h5 {
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, #ff7eb3, #ff758c);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Boutique Store</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="products.html">Shop</a>
+                <a class="nav-link" href="custom_order.html">Custom Orders</a>
+                <a class="nav-link" href="cart.html">Cart</a>
+                <a class="nav-link" href="track_order.html">Track Order</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to Boutique Store</h1>
+        <p>Your one-stop shop for stylish clothes, premium fabrics, and custom outfits.</p>
+        <a href="products.html" class="btn btn-light btn-lg mt-3">Start Shopping</a>
+    </div>
+
+    <!-- Featured Products -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">✨ Featured Products ✨</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/90/b1/ae/90b1aec32956e8211e26abb63496adab.jpg" class="card-img-top" alt="Cropped Image" style="width: 100%; height: 330px; object-fit: cover; object-position: center;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Elegant Dress</h5>
+                        <p class="text-danger">$60</p>
+                        <a href="product_details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://i.pinimg.com/236x/2b/70/8f/2b708fbd30f211f5cb8a8c1148de095c.jpg" class="card-img-top" >
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Men's Suit</h5>
+                        <p class="text-danger">$120</p>
+                        <a href="product_details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://www.blackstitch.in/cdn/shop/files/EMBROIDERY_WHITE_1_e212328d-17df-44aa-96ef-1004843fd53d.webp?v=1727154584" class="card-img-top" style="height: 330px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Casual Shirt</h5>
+                        <p class="text-danger">$35</p>
+                        <a href="product_details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://freakins.com/cdn/shop/files/8JULY24_17169-Edit_4aec46f8-78bd-49cd-aab4-49477207c9cd.jpg?v=1736359558&width=1001" class="card-img-top" style="height: 330px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Denim Jeans</h5>
+                        <p class="text-danger">$45</p>
+                        <a href="product_details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">🛍️ Shop by Category</h2>
+        <div class="row text-center">
+            <div class="col-md-4 category">
+                <h4>Clothes</h4>
+                <a href="products.html">
+                    <img src="https://krendly.com/wp-content/uploads/2023/05/3.jpg" class="img-fluid">
+                </a>
+            </div>
+            <div class="col-md-4 category">
+                <h4>Fabrics</h4>
+                <a href="fabrics.html">
+                    <img src="https://5.imimg.com/data5/HD/GT/SH/SELLER-35714620/curtain-and-upholstery-fabrics.jpg" class="img-fluid">
+                </a>
+            </div>
+            <div class="col-md-4 category">
+                <h4>Custom Orders</h4>
+                <a href="custom_order.html">
+                    <img src="https://lirp.cdn-website.com/df1d97cf/dms3rep/multi/opt/09461A6F-11E9-4130-9EEE-010B248EEDA9-384w.jpeg" class="img-fluid">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Testimonials -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">💬 What Our Customers Say</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p>⭐⭐⭐⭐⭐ "The quality of the fabric is amazing. Fast delivery!"</p>
+                    <h5>- Sarah J.</h5>
+                </div>
+                <div class="carousel-item">
+                    <p>⭐⭐⭐⭐ "The custom dress was exactly as I wanted. Will order again!"</p>
+                    <h5>- David P.</h5>
+                </div>
+                <div class="carousel-item">
+                    <p>⭐⭐⭐⭐⭐ "Great collection! The prices are reasonable too."</p>
+                    <h5>- Emma R.</h5>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Boutique Store. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

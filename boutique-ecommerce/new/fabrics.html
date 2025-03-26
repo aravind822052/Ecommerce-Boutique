@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabrics - Boutique Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script>
+        function addToCart(itemName, pricePerMeter) {
+            let length = document.getElementById(itemName).value;
+            if (length <= 0) {
+                alert("Please enter a valid fabric length!");
+                return;
+            }
+            let totalPrice = pricePerMeter * length;
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push({ name: itemName + " (" + length + "m)", price: totalPrice });
+            localStorage.setItem("cart", JSON.stringify(cart));
+            window.location.href = "cart.html"; // Redirect to cart page
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Boutique Store</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="cart.html">Cart</a>
+                <a class="nav-link" href="track_order.html">Track Order</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>Buy Fabrics</h2>
+        
+        <div class="row">
+            <!-- Cotton Fabric -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-img-top text-center" style="height: 200px; background-color: #ddd;">
+                        <p class="mt-5">Image Placeholder</p>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Cotton Fabric</h5>
+                        <p>$10 per meter</p>
+                        <input type="number" id="Cotton Fabric" class="form-control mb-2" placeholder="Enter length (m)">
+                        <button class="btn btn-primary" onclick="addToCart('Cotton Fabric', 10)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Silk Fabric -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-img-top text-center" style="height: 200px; background-color: #ddd;">
+                        <p class="mt-5">Image Placeholder</p>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Silk Fabric</h5>
+                        <p>$25 per meter</p>
+                        <input type="number" id="Silk Fabric" class="form-control mb-2" placeholder="Enter length (m)">
+                        <button class="btn btn-primary" onclick="addToCart('Silk Fabric', 25)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Denim Fabric -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-img-top text-center" style="height: 200px; background-color: #ddd;">
+                        <p class="mt-5">Image Placeholder</p>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Denim Fabric</h5>
+                        <p>$18 per meter</p>
+                        <input type="number" id="Denim Fabric" class="form-control mb-2" placeholder="Enter length (m)">
+                        <button class="btn btn-primary" onclick="addToCart('Denim Fabric', 18)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wool Fabric -->
+            <div class="col-md-4 mt-3">
+                <div class="card">
+                    <div class="card-img-top text-center" style="height: 200px; background-color: #ddd;">
+                        <p class="mt-5">Image Placeholder</p>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Wool Fabric</h5>
+                        <p>$30 per meter</p>
+                        <input type="number" id="Wool Fabric" class="form-control mb-2" placeholder="Enter length (m)">
+                        <button class="btn btn-primary" onclick="addToCart('Wool Fabric', 30)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Linen Fabric -->
+            <div class="col-md-4 mt-3">
+                <div class="card">
+                    <div class="card-img-top text-center" style="height: 200px; background-color: #ddd;">
+                        <p class="mt-5">Image Placeholder</p>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Linen Fabric</h5>
+                        <p>$15 per meter</p>
+                        <input type="number" id="Linen Fabric" class="form-control mb-2" placeholder="Enter length (m)">
+                        <button class="btn btn-primary" onclick="addToCart('Linen Fabric', 15)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Velvet Fabric -->
+            <div class="col-md-4 mt-3">
+                <div class="card">
+                    <div class="card-img-top text-center" style="height: 200px; background-color: #ddd;">
+                        <p class="mt-5">Image Placeholder</p>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Velvet Fabric</h5>
+                        <p>$35 per meter</p>
+                        <input type="number" id="Velvet Fabric" class="form-control mb-2" placeholder="Enter length (m)">
+                        <button class="btn btn-primary" onclick="addToCart('Velvet Fabric', 35)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
